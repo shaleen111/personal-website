@@ -1,0 +1,72 @@
+
+{% extends "base.html" %}
+
+{% set placeholder_image = './img/placeholder.png' %}
+
+{% block css %}
+    <link rel="stylesheet" href="./style/home.css">
+{% endblock %}
+
+{% block content %}
+    <article id="highlight">
+        <img src="{{ placeholder_image }}" alt="Article Image">
+        <span id="highlight-content">
+            <h2>Title Title Title Title Title Title</h2>
+            <p class="article-meta"> 21/08/2021 | 5 mins </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, provident voluptate? Commodi quam odio veniam officiis ratione adipisci repellat error fugit, iste animi optio! Ratione reiciendis quas numquam labore corrupti.</p>
+            <button>
+                <a href="#">Read More</a>
+            </button>
+        </span>
+    </article>
+    <section id="section-text">
+        <p><span> Featured </span></p>
+    </section>
+    <section id="featured">
+        {% for _, p in site.posts.items() %}
+        <article class="card">
+            <img src="{{p.cover}}" alt="Article Image">
+            <h2>{{p.title}}</h2>
+            <p class="article-meta"> 21/08/2021 | {{ p.minutes }} mins </p>
+            <p>{{p.desc}}</p>
+            <button>
+                <a href="#">Read More</a>
+            </button>
+        </article>
+        {% endfor %}
+        <article class="card">
+            <img src="{{ placeholder_image }}" alt="Article Image">
+            <h2>Title Title Title Title Title Title</h2>
+            <p class="article-meta"> 21/08/2021 | 5 mins </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, provident voluptate? Commodi quam odio veniam officiis ratione adipisci repellat error fugit, iste animi optio! Ratione reiciendis quas numquam labore corrupti.</p>
+            <button>
+                <a href="#">Read More</a>
+            </button>
+        </article>
+        <article class="card">
+            <img src="{{ placeholder_image }}" alt="Article Image">
+            <h2>Title Title Title Title Title Title</h2>
+            <p class="article-meta"> 21/08/2021 | 5 mins </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, provident voluptate? Commodi quam odio veniam officiis ratione adipisci repellat error fugit, iste animi optio! Ratione reiciendis quas numquam labore corrupti.</p>
+            <button>
+                <a href="#">Read More</a>
+            </button>
+        </article>
+        <article class="card">
+            <img src="{{ placeholder_image }}" alt="Article Image">
+            <h2>Title Title Title Title Title Title</h2>
+            <p class="article-meta"> 21/08/2021 | 5 mins </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, provident voluptate? Commodi quam odio veniam officiis ratione adipisci repellat error fugit, iste animi optio! Ratione reiciendis quas numquam labore corrupti.</p>
+            <button>
+                <a href="#">Read More</a>
+            </button>
+        </article>
+    </section>
+    <section id="sidebar">
+            <div id="canvas-wrap">
+                <canvas>
+
+                </canvas>
+            </div>
+    </section>
+{% endblock %}

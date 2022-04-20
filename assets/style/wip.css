@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+#content-container
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#pixel
+{
+    image-rendering: pixelated;
+    width: 240px;
+    padding-right: 45px;
+    margin: 7rem auto;
+}
+
+#separator
+{
+    height: 0%;
+    flex-basis: 100%;
+}
+
+#type-text h2
+{
+    font-family: 'Roboto Mono', monospace;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto 10rem auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(30, end), blinking .5s step-end infinite;
+}
+
+@keyframes typing
+{
+    from
+    {
+        width: 0
+    }
+    to
+    {
+        width: 100%
+    }
+}
+
+@keyframes blinking
+{
+    from, to
+    {
+        border-color: transparent
+    }
+    50%
+    {
+        border-color: orange
+    }
+}

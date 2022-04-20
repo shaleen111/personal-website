@@ -1,0 +1,39 @@
+.markdown-body
+{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#title
+{
+    font-size: 2.5rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+#post-meta
+{
+    text-align: center;
+}
+
+#cover
+{
+    width: 60%;
+    margin: auto;
+    display: block;
+}
+
+.markdown-body
+{
+    padding-top: 2em;
+    padding-bottom: 2rem;
+    font-size: 17px;
+}
+
+@media screen and (max-width: 1000px)
+{
+    #cover
+    {
+        width: 100%;
+    }
+}

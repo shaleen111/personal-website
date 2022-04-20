@@ -1,0 +1,15 @@
+{
+    "no output": {
+        "templates": [
+            "base.html",
+            "post.html"
+        ],
+        "posts": [],
+        "assets": [
+            "brand.png"
+        ]
+    },
+    "data access": {
+       "templates/index.html": ["data/featured.json"]
+    }
+}
